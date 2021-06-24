@@ -96,7 +96,7 @@ func accessListTx() {
 	chainID := new(big.Int).SetUint64(3)
 	accessList := make(types.AccessList, 0)
 
-	newLegacyTx := types.NewTx(&types.AccessListTx{
+	newAccessListTx := types.NewTx(&types.AccessListTx{
 		Nonce:      nonce,
 		GasPrice:   gasPrice,
 		Gas:        gas,
@@ -110,5 +110,5 @@ func accessListTx() {
 		AccessList: accessList,
 	})
 	fmt.Println("AccessListTx expected hash => 0xb4848204c8432070136a41792003caf8dea08f9eb284eb4240845bf64a66a068")
-	fmt.Println("AccessListTx actual hash   =>", newLegacyTx.Hash().String())
+	fmt.Println("AccessListTx actual hash   =>", newAccessListTx.Hash().String())
 }
