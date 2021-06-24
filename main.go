@@ -15,7 +15,6 @@ func main() {
 }
 
 func legacyTx() {
-	// real testnet tx https://ropsten.etherscan.io/tx/0xb4848204c8432070136a41792003caf8dea08f9eb284eb4240845bf64a66a068
 	nonce, err := hexutil.DecodeUint64("0x1216")
 	if err != nil {
 		panic(err)
